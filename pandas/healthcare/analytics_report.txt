@@ -1,0 +1,132 @@
+================================================================================
+  PRODUCTION ANALYTICS PIPELINE — FULL REPORT
+  Generated : 2026-05-31 17:17:19
+  Dataset   : /mnt/user-data/uploads/healthcare_dataset.csv
+================================================================================
+
+── DATA QUALITY ──
+  total_rows                    : 54966
+  total_columns                 : 19
+  total_cells                   : 1044354
+  null_cells                    : 0
+  completeness_pct              : 100.0
+  numeric_columns               : 5
+  categorical_columns           : 14
+  datetime_columns              : 0
+
+── DESCRIPTIVE STATISTICS ──
+                   count          mean           std          min          10%           25%           50%           75%           90%           max  skewness  kurtosis   cv_%
+age              54966.0     51.535185     19.605661    13.000000    24.000000     35.000000     52.000000     68.000000     79.000000     89.000000 -0.005678 -1.186082  38.04
+billing_amount   54966.0  25544.306284  14208.409711 -2008.492140  5877.016256  13243.718641  25542.749145  37819.858159  45160.258877  52764.276736 -0.001304 -1.190254  55.62
+room_number      54966.0    301.124404    115.223143   101.000000   141.000000    202.000000    302.000000    401.000000    460.000000    500.000000 -0.011157 -1.193452  38.26
+log_age          54966.0      3.880512      0.420608     2.639057     3.218876      3.583519      3.970292      4.234107      4.382027      4.499810 -0.546732 -0.761538  10.84
+log_room_number  54966.0      5.625538      0.432749     4.624973     4.955827      5.313206      5.713733      5.996452      6.133398      6.216606 -0.560121 -0.762961   7.69
+
+── TOP FEATURE CORRELATIONS ──
+     feature_a       feature_b  pearson_r    abs_r
+           age         log_age   0.981332 0.981332
+   room_number log_room_number   0.980545 0.980545
+billing_amount log_room_number  -0.004974 0.004974
+billing_amount     room_number  -0.003930 0.003930
+billing_amount         log_age  -0.003634 0.003634
+           age  billing_amount  -0.003427 0.003427
+           age log_room_number  -0.000858 0.000858
+       log_age log_room_number  -0.000456 0.000456
+           age     room_number  -0.000352 0.000352
+   room_number         log_age   0.000117 0.000117
+           age             age        NaN      NaN
+billing_amount             age        NaN      NaN
+billing_amount  billing_amount        NaN      NaN
+   room_number             age        NaN      NaN
+   room_number  billing_amount        NaN      NaN
+   room_number     room_number        NaN      NaN
+       log_age             age        NaN      NaN
+       log_age  billing_amount        NaN      NaN
+       log_age     room_number        NaN      NaN
+       log_age         log_age        NaN      NaN
+
+── STATISTICAL TEST RESULTS ──
+  ANOVA
+    f_statistic              : 2.2242
+    p_value                  : 0.049044
+    significant              : True
+    interpretation           : Billing differs significantly by medical condition.
+
+  CHI2
+    chi2                     : 13.2716
+    p_value                  : 0.208881
+    degrees_of_freedom       : 10
+    significant              : False
+    interpretation           : No significant association between test results and condition.
+
+  REGRESSION
+    r_squared                : 1.2e-05
+    slope_age                : -2.4834
+    intercept                : 25672.29
+    interpretation           : For every 1-year increase in age, billing changes by $-2.48. R²=0.0000 (model explains 0.00% of billing variance).
+
+  TTEST
+    t_statistic              : 1.1579
+    p_value                  : 0.246895
+    male_mean                : 25614.45
+    female_mean              : 25474.1
+    significant              : False
+    interpretation           : No significant billing difference between genders.
+
+  CLUSTERING
+    n_clusters               : 4
+    silhouette_score         : 0.2825
+    interpretation           : K-Means (k=4) silhouette score = 0.2825. Overlapping clusters — consider feature selection.
+
+── ANALYTICAL INSIGHTS ──
+
+  [01] [Data Quality] Dataset Overview & Completeness
+       The dataset contains 54,966 patient records across 19 attributes. Data completeness is 100.0%. There are 5 numeric, 14 categorical, and 0 datetime columns.
+
+  [02] [Financial Analytics] Billing Amount Distribution
+       Patient billing amounts range from $-2,008 to $52,764 with a median of $25,543 (IQR: $13,244 – $37,820). The top 10% of patients account for bills exceeding $45,160, indicating a right-skewed revenue distribution typical in healthcare.
+
+  [03] [Demographics] Patient Age Demographics
+       Patient ages span 13 – 89 years with a mean of 51.5 ± 19.6 years. The dominant age group is '65+'. Senior patients (65+) represent 30.8% of the cohort.
+
+  [04] [Demographics] Gender Distribution
+       The dataset is nearly balanced: 50.0% Male and 50.0% Female. This balanced split supports unbiased gender-stratified clinical analytics.
+
+  [05] [Clinical Analytics] Medical Condition Prevalence & Cost
+       'Arthritis' is the most prevalent condition (9,218 cases; 16.8%). 'Asthma' is least prevalent (9,095 cases). All six conditions are represented with broadly similar frequencies, suggesting a well-stratified clinical dataset. Condition with highest average billing is 'Obesity' at $25,804.
+
+  [06] [Operational Analytics] Admission Type Breakdown
+       Admissions are roughly split: Elective 33.6%, Urgent 33.5%, Emergency 32.9%. The near-equal split across types is unusual and may reflect sampling design. Emergency admissions incur the highest average billing ($25,505 vs Elective $25,612).
+
+  [07] [Financial Analytics] Insurance Provider vs Billing Analysis
+       'Medicare' is associated with the highest average billing ($25,628), while 'Unitedhealthcare' is lowest ($25,415). Differences are statistically noteworthy and may reflect coverage policy or patient demographics.
+
+  [08] [Clinical Analytics] Blood Type Distribution
+       All eight major blood types are present. 'A-' is most common (12.5%), closely mirroring global blood type frequencies. Blood type distribution shows no significant deviation, confirming representative patient sampling.
+
+  [09] [Clinical Analytics] Test Result Patterns by Medical Condition
+       'Arthritis' has the highest rate of abnormal test results (34.2%). Chi-square analysis indicates that test result distribution varies by condition, suggesting condition-specific diagnostic pathways.
+
+  [10] [Clinical Analytics] Medication Prescribing Patterns
+       'Lipitor' is the most prescribed medication (20.1%). All five medications have broadly similar prescription frequencies (range: 19.9% – 20.1%), suggesting uniform protocol-driven prescribing. 'Ibuprofen' prescriptions correlate with highest average billing ($25,745).
+
+  [11] [Statistical Findings] Age vs Billing Amount Correlation
+       Pearson correlation between age and billing amount: r = -0.003 (p = 4.218e-01). No statistically significant linear relationship was detected, suggesting billing is driven by condition severity rather than age alone.
+
+  [12] [Financial Analytics] Top Hospitals by Average Billing
+       The five hospitals with the highest average billing are: 'Hernandez-Morton', 'Walker-Garcia', 'Ruiz-Anthony', 'George-Gonzalez', 'Rocha-Carter'. Hospital-level billing variance may reflect specialisation mix, geographic pricing, or acuity differences — a key input for network contract negotiations.
+
+── CHART OUTPUTS ──
+  /mnt/user-data/outputs/charts/01_executive_dashboard.png
+  /mnt/user-data/outputs/charts/02_billing_distribution.png
+  /mnt/user-data/outputs/charts/03_age_distribution.png
+  /mnt/user-data/outputs/charts/04_medical_condition_analysis.png
+  /mnt/user-data/outputs/charts/05_correlation_heatmap.png
+  /mnt/user-data/outputs/charts/06_admission_type_analysis.png
+  /mnt/user-data/outputs/charts/07_insurance_billing.png
+  /mnt/user-data/outputs/charts/08_blood_type_distribution.png
+  /mnt/user-data/outputs/charts/10_test_results_heatmap.png
+  /mnt/user-data/outputs/charts/11_medication_analysis.png
+  /mnt/user-data/outputs/charts/13_age_billing_scatter.png
+  /mnt/user-data/outputs/charts/14_pca_clustering.png
+  /mnt/user-data/outputs/charts/15_billing_box_by_condition.png

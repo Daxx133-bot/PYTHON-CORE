@@ -1,0 +1,45 @@
+INSIGHT SUMMARY — ANALYTICS PIPELINE
+============================================================
+
+▶ DATA QUALITY
+  • Dataset Overview & Completeness
+    The dataset contains 54,966 patient records across 19 attributes. Data completeness is 100.0%. There are 5 numeric, 14 categorical, and 0 datetime columns.
+
+▶ FINANCIAL ANALYTICS
+  • Billing Amount Distribution
+    Patient billing amounts range from $-2,008 to $52,764 with a median of $25,543 (IQR: $13,244 – $37,820). The top 10% of patients account for bills exceeding $45,160, indicating a right-skewed revenue distribution typical in healthcare.
+
+  • Insurance Provider vs Billing Analysis
+    'Medicare' is associated with the highest average billing ($25,628), while 'Unitedhealthcare' is lowest ($25,415). Differences are statistically noteworthy and may reflect coverage policy or patient demographics.
+
+  • Top Hospitals by Average Billing
+    The five hospitals with the highest average billing are: 'Hernandez-Morton', 'Walker-Garcia', 'Ruiz-Anthony', 'George-Gonzalez', 'Rocha-Carter'. Hospital-level billing variance may reflect specialisation mix, geographic pricing, or acuity differences — a key input for network contract negotiations.
+
+▶ DEMOGRAPHICS
+  • Patient Age Demographics
+    Patient ages span 13 – 89 years with a mean of 51.5 ± 19.6 years. The dominant age group is '65+'. Senior patients (65+) represent 30.8% of the cohort.
+
+  • Gender Distribution
+    The dataset is nearly balanced: 50.0% Male and 50.0% Female. This balanced split supports unbiased gender-stratified clinical analytics.
+
+▶ CLINICAL ANALYTICS
+  • Medical Condition Prevalence & Cost
+    'Arthritis' is the most prevalent condition (9,218 cases; 16.8%). 'Asthma' is least prevalent (9,095 cases). All six conditions are represented with broadly similar frequencies, suggesting a well-stratified clinical dataset. Condition with highest average billing is 'Obesity' at $25,804.
+
+  • Blood Type Distribution
+    All eight major blood types are present. 'A-' is most common (12.5%), closely mirroring global blood type frequencies. Blood type distribution shows no significant deviation, confirming representative patient sampling.
+
+  • Test Result Patterns by Medical Condition
+    'Arthritis' has the highest rate of abnormal test results (34.2%). Chi-square analysis indicates that test result distribution varies by condition, suggesting condition-specific diagnostic pathways.
+
+  • Medication Prescribing Patterns
+    'Lipitor' is the most prescribed medication (20.1%). All five medications have broadly similar prescription frequencies (range: 19.9% – 20.1%), suggesting uniform protocol-driven prescribing. 'Ibuprofen' prescriptions correlate with highest average billing ($25,745).
+
+▶ OPERATIONAL ANALYTICS
+  • Admission Type Breakdown
+    Admissions are roughly split: Elective 33.6%, Urgent 33.5%, Emergency 32.9%. The near-equal split across types is unusual and may reflect sampling design. Emergency admissions incur the highest average billing ($25,505 vs Elective $25,612).
+
+▶ STATISTICAL FINDINGS
+  • Age vs Billing Amount Correlation
+    Pearson correlation between age and billing amount: r = -0.003 (p = 4.218e-01). No statistically significant linear relationship was detected, suggesting billing is driven by condition severity rather than age alone.
+

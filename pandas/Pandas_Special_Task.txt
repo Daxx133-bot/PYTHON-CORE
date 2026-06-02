@@ -1,0 +1,31 @@
+/********semester wise no. of subjects equal***********/
+
+enrollment_number->user input 
+name->user input 
+gender->user input 
+email->user input 
+contact->user input 
+sem1(8)
+	sem1_sub1_marks1(3)->user input 
+	spi->user input 
+	cpi->user input 
+
+1-Generate DataFrame from given structure
+2-Input Data for n students
+3-Save Data in JSON File(JSON-MultiIndex JSON)
+4-Fetch Data From JSON File and Store inside CSV File
+5-Fetch Data From CSV File and Store inside Database Table
+(create table using pandas dynamically)
+
+
+
+
+
+
+
+
+
+
+
+
+

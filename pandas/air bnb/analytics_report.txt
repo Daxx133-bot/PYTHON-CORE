@@ -1,0 +1,132 @@
+================================================================================
+  NYC AIRBNB ANALYTICS PIPELINE — FULL REPORT
+  Generated : 2026-06-01 06:47:51
+  Dataset   : /mnt/user-data/uploads/Airbnb_data.csv
+================================================================================
+
+── DATA QUALITY ──
+  total_rows                    : 48884
+  total_columns                 : 23
+  total_cells                   : 1124332
+  null_cells                    : 20102
+  completeness_pct              : 98.21
+  numeric_columns               : 16
+  categorical_columns           : 7
+  datetime_columns              : 0
+
+── DESCRIPTIVE STATISTICS ──
+                                             count          mean           std        min        10%        25%          50%           75%           90%           max   skewness    kurtosis    cv_%
+latitude                                   48884.0     40.728953      0.054532  40.499790  40.667983  40.690100    40.723080     40.763120     40.804890      40.91306   0.236910    0.148774    0.13
+longitude                                  48884.0    -73.952176      0.046159 -74.244420 -73.996690 -73.983080   -73.955685    -73.936290    -73.907810     -73.71299   1.284585    5.022567   -0.06
+price                                      48884.0    152.755053    240.170260  10.000000  49.000000  69.000000   106.000000    175.000000    269.000000   10000.00000  19.119027  585.636608  157.23
+minimum_nights                             48884.0      7.029887     20.512224   1.000000   1.000000   1.000000     3.000000      5.000000     28.000000    1250.00000  21.826797  853.984924  291.79
+number_of_reviews                          48884.0     23.271991     44.551331   0.000000   0.000000   1.000000     5.000000     24.000000     70.000000     629.00000   3.691201   19.533756  191.44
+reviews_per_month                          38833.0      1.373128      1.680391   0.010000   0.060000   0.190000     0.720000      2.020000      3.630000      58.50000   3.131063   42.510658  122.38
+calculated_host_listings_count             48884.0      7.144628     32.956185   1.000000   1.000000   1.000000     1.000000      2.000000      5.000000     327.00000   7.932253   67.534749  461.27
+availability_365                           48884.0    112.779498    131.627271   0.000000   0.000000   0.000000    45.000000    227.000000    337.000000     365.00000   0.763454   -0.997566  116.71
+price_capped                               48884.0    145.510024    130.946570  10.000000  49.000000  69.000000   106.000000    175.000000    269.000000    1000.00000   3.357598   15.624645   89.99
+has_reviews                                48884.0      0.794391      0.404150   0.000000   0.000000   1.000000     1.000000      1.000000      1.000000       1.00000  -1.456898    0.122557   50.88
+revenue_proxy                              48884.0  18498.376851  35979.518136   0.000000   0.000000   0.000000  4300.000000  22515.000000  52042.400000  365000.00000   4.521000   29.641144  194.50
+log_price                                  48884.0      4.737951      0.691782   2.397895   3.912023   4.248495     4.672829      5.170484      5.598422       9.21044   0.629445    1.343626   14.60
+price_is_outlier                           48884.0      0.060797      0.238960   0.000000   0.000000   0.000000     0.000000      0.000000      0.000000       1.00000   3.676105   11.514216  393.05
+minimum_nights_is_outlier                  48884.0      0.135116      0.341851   0.000000   0.000000   0.000000     0.000000      0.000000      1.000000       1.00000   2.134845    2.557668  253.01
+number_of_reviews_is_outlier               48884.0      0.123108      0.328564   0.000000   0.000000   0.000000     0.000000      0.000000      1.000000       1.00000   2.294271    3.263812  266.89
+calculated_host_listings_count_is_outlier  48884.0      0.144689      0.351791   0.000000   0.000000   0.000000     0.000000      0.000000      1.000000       1.00000   2.020091    2.080855  243.14
+
+── STATISTICAL TEST RESULTS ──
+  ANOVA_PRICE_BOROUGH
+    f_statistic                   : 1035.2308
+    p_value                       : 0.0
+    significant                   : True
+    interpretation                : Price differs significantly across NYC boroughs (p<0.05). Borough is a strong pricing predictor.
+
+  ANOVA_PRICE_ROOM_TYPE
+    f_statistic                   : 5822.9405
+    p_value                       : 0.0
+    significant                   : True
+    interpretation                : Room type is a statistically significant price driver (ANOVA p<0.05).
+
+  CHI2_ROOM_BOROUGH
+    chi2                          : 1558.4325
+    p_value                       : 0.0
+    dof                           : 8
+    significant                   : True
+    interpretation                : Room type distribution is significantly associated with borough (Chi² p<0.05). Different boroughs favour different listing types.
+
+  REGRESSION_PRICE
+    r_squared                     : 0.028117
+    coefficients                  : {'minimum_nights': np.float64(0.0113), 'number_of_reviews': np.float64(-0.2278), 'calculated_host_listings_count': np.float64(0.3203), 'availability_365': np.float64(0.1154)}
+    interpretation                : Ridge regression on price: R²=0.0281. Availability (coef=+0.12) and min_nights (coef=+0.01) are key drivers.
+
+  TTEST_ENTIRE_VS_PRIVATE
+    t_statistic                   : 108.6841
+    p_value                       : 0.0
+    entire_median                 : 160.0
+    private_median                : 70.0
+    significant                   : True
+    interpretation                : Entire home/apt (median $160) is significantly more expensive than private rooms (median $70), Welch T-test p = 0.00e+00.
+
+  CLUSTERING_QUALITY
+    n_clusters                    : 5
+    silhouette_score              : 0.4547
+    interpretation                : K-Means (k=5) silhouette = 0.4547. Reasonable cluster separation found.
+
+── ANALYTICAL INSIGHTS ──
+
+  [01] [Data Quality] Dataset Overview
+       The dataset contains 48,884 Airbnb listings across 5 NYC boroughs with 23 attributes. Data completeness is 98.2%. There are 16 numeric and 7 categorical columns.
+
+  [02] [Pricing Analytics] Price Distribution & Market Segmentation
+       Nightly prices range from $10 to $10,000 with a median of $106 and mean of $153 (heavily right-skewed). 31.2% of listings are budget (≤$75/night) while 6.9% are luxury (>$300/night). The IQR spans $69–$175, indicating a fragmented market with wide price dispersion.
+
+  [03] [Pricing Analytics] Borough-Level Price Hierarchy
+       Manhattan commands the highest median nightly rate ($150) — 2.3× more than Bronx ($65). Brooklyn is the second most expensive borough, reflecting its growing popularity as a Manhattan alternative. The Bronx and Staten Island represent value segments with the lowest rates.
+
+  [04] [Market Structure] Room Type Market Composition
+       Entire home/apt listings dominate at 52.0% of supply, followed by private rooms (45.7%). Shared rooms are a niche segment at 2.4%. 'Entire home/apt' commands a 2.3× price premium over private rooms. This split signals both leisure travellers seeking privacy and budget guests willing to share spaces.
+
+  [05] [Operational Analytics] Listing Availability & Occupancy Signals
+       Median annual availability is 45 days, with mean 113 days. 35.9% of listings show zero availability (possibly blocked/inactive), while 2.6% are available year-round. Low availability often correlates with high demand, suggesting popular listings are consistently booked.
+
+  [06] [Guest Engagement] Review Volume & Guest Engagement
+       20.6% of listings have zero reviews — potentially new or inactive. Listings with 50+ reviews (14.5%) represent proven, high-engagement properties. Median review count is 5 with mean 23.3. Review count and price show a Pearson r = -0.064, suggesting reviews are not price-driven.
+
+  [07] [Host Analytics] Host Portfolio Scale & Professionalisation
+       66.1% of listings come from solo hosts (1 listing), indicating a large hobbyist/occasional-host segment. However, 9.8% of listings are from hosts with 6+ properties, suggesting meaningful professional operator presence. The most prolific host manages 327 listings — a full commercial operation.
+
+  [08] [Geographic Analytics] Top Neighbourhoods by Listing Volume
+       The five most listed neighbourhoods are: Williamsburg (3,919), Bedford-Stuyvesant (3,710), Harlem (2,658), Bushwick (2,462), Upper West Side (1,971). Williamsburg and Bedford-Stuyvesant in Brooklyn lead in volume, reflecting the borough's rising popularity. The most expensive neighbourhood by median price is Fort Wadsworth ($800/night).
+
+  [09] [Regulatory & Strategy] Minimum Night Requirements & Stay Strategy
+       26.0% of listings accept 1-night stays, maximising flexibility. 9.2% require 30+ nights, effectively targeting monthly renters (possibly bypassing short-term rental regulations). Long-stay listings median at $130/night vs $90 for 1-night minimums. Extreme outliers (minimum nights >365) likely represent data errors.
+
+  [10] [Financial Analytics] Revenue Concentration & Earning Potential
+       Using price × availability as a revenue proxy, the top 10% of listings account for 54.4% of estimated total platform revenue — a classic Pareto-style concentration. Median estimated annual revenue is $4,300. Manhattan generates the highest estimated total revenue among all boroughs.
+
+  [11] [Statistical Findings] Statistical Price Difference Across Room Types
+       One-way ANOVA confirms that nightly prices differ significantly across room types (F = 1715.41, p = 0.00e+00). Entire home/apt listings are statistically more expensive than private and shared rooms. This validates using room type as a key price predictor in any forecasting model.
+
+  [12] [Geographic Analytics] Geographic Density & Supply Hotspots
+       Manhattan has the highest listing density with 21,660 listings, followed by Brooklyn (20,095). These two boroughs together represent 85.4% of all NYC supply. Queens, the Bronx, and Staten Island are significantly underserved, representing potential growth markets for hosts and investors.
+
+  [13] [Host Analytics] Commercial vs Solo Host Pricing Strategy
+       Commercial hosts price 1.59× higher than solo hosts on median, suggesting different value propositions. Commercial operators likely benefit from economies of scale in property management, while solo hosts may price conservatively to attract first reviews. This has implications for platform trust and regulatory scrutiny.
+
+  [14] [Anomaly Detection] Anomalous Pricing Detection
+       IQR-based outlier detection flagged 2,972 listings (6.1%) with anomalous nightly prices. Outlier listings average $659/night vs $120 for standard listings. These may represent luxury penthouses, data entry errors, or placeholder listings. Excluding them reduces mean price significantly and improves model accuracy.
+
+── CHART OUTPUTS ──
+  /mnt/user-data/outputs/charts/01_executive_dashboard.png
+  /mnt/user-data/outputs/charts/02_price_distribution.png
+  /mnt/user-data/outputs/charts/03_borough_analysis.png
+  /mnt/user-data/outputs/charts/04_room_type_analysis.png
+  /mnt/user-data/outputs/charts/05_correlation_heatmap.png
+  /mnt/user-data/outputs/charts/06_availability_analysis.png
+  /mnt/user-data/outputs/charts/07_host_analysis.png
+  /mnt/user-data/outputs/charts/08_neighbourhood_top20.png
+  /mnt/user-data/outputs/charts/09_geo_scatter.png
+  /mnt/user-data/outputs/charts/10_minimum_nights.png
+  /mnt/user-data/outputs/charts/11_review_analysis.png
+  /mnt/user-data/outputs/charts/12_revenue_proxy.png
+  /mnt/user-data/outputs/charts/13_price_tier_breakdown.png
+  /mnt/user-data/outputs/charts/14_pca_clustering.png

@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-31T17:17:19.520864",
+    "dataset": "/mnt/user-data/uploads/healthcare_dataset.csv"
+  },
+  "data_quality": {
+    "total_rows": 54966,
+    "total_columns": 19,
+    "total_cells": 1044354,
+    "null_cells": 0,
+    "completeness_pct": 100.0,
+    "numeric_columns": 5,
+    "categorical_columns": 14,
+    "datetime_columns": 0
+  },
+  "categorical_summary": {
+    "name": {
+      "unique_count": 40235,
+      "top_value": "Michael Williams",
+      "top_freq": 24,
+      "top_pct": 0.04
+    },
+    "gender": {
+      "unique_count": 2,
+      "top_value": "Male",
+      "top_freq": 27496,
+      "top_pct": 50.02
+    },
+    "blood_type": {
+      "unique_count": 8,
+      "top_value": "A-",
+      "top_freq": 6898,
+      "top_pct": 12.55
+    },
+    "medical_condition": {
+      "unique_count": 6,
+      "top_value": "Arthritis",
+      "top_freq": 9218,
+      "top_pct": 16.77
+    },
+    "date_of_admission": {
+      "unique_count": 1827,
+      "top_value": "2024-03-16",
+      "top_freq": 50,
+      "top_pct": 0.09
+    },
+    "doctor": {
+      "unique_count": 40341,
+      "top_value": "Michael Smith",
+      "top_freq": 27,
+      "top_pct": 0.05
+    },
+    "hospital": {
+      "unique_count": 39876,
+      "top_value": "Llc Smith",
+      "top_freq": 44,
+      "top_pct": 0.08
+    },
+    "insurance_provider": {
+      "unique_count": 5,
+      "top_value": "Cigna",
+      "top_freq": 11139,
+      "top_pct": 20.27
+    },
+    "admission_type": {
+      "unique_count": 3,
+      "top_value": "Elective",
+      "top_freq": 18473,
+      "top_pct": 33.61
+    },
+    "discharge_date": {
+      "unique_count": 1856,
+      "top_value": "2020-03-15",
+      "top_freq": 53,
+      "top_pct": 0.1
+    },
+    "medication": {
+      "unique_count": 5,
+      "top_value": "Lipitor",
+      "top_freq": 11038,
+      "top_pct": 20.08
+    },
+    "test_results": {
+      "unique_count": 3,
+      "top_value": "Abnormal",
+      "top_freq": 18437,
+      "top_pct": 33.54
+    },
+    "billing_band": {
+      "unique_count": 4,
+      "top_value": "Low",
+      "top_freq": 13742,
+      "top_pct": 25.0
+    },
+    "age_group": {
+      "unique_count": 5,
+      "top_value": "65+",
+      "top_freq": 16096,
+      "top_pct": 29.28
+    }
+  },
+  "statistical_tests": {
+    "anova": {
+      "f_statistic": 2.2242,
+      "p_value": 0.049044,
+      "significant": true,
+      "interpretation": "Billing differs significantly by medical condition."
+    },
+    "chi2": {
+      "chi2": 13.2716,
+      "p_value": 0.208881,
+      "degrees_of_freedom": 10,
+      "significant": false,
+      "interpretation": "No significant association between test results and condition."
+    },
+    "regression": {
+      "r_squared": 1.2e-05,
+      "slope_age": -2.4834,
+      "intercept": 25672.29,
+      "interpretation": "For every 1-year increase in age, billing changes by $-2.48. R\u00b2=0.0000 (model explains 0.00% of billing variance)."
+    },
+    "ttest": {
+      "t_statistic": 1.1579,
+      "p_value": 0.246895,
+      "male_mean": 25614.45,
+      "female_mean": 25474.1,
+      "significant": false,
+      "interpretation": "No significant billing difference between genders."
+    },
+    "clustering": {
+      "n_clusters": 4,
+      "silhouette_score": 0.2825,
+      "interpretation": "K-Means (k=4) silhouette score = 0.2825. Overlapping clusters \u2014 consider feature selection."
+    }
+  },
+  "insights": [
+    {
+      "title": "Dataset Overview & Completeness",
+      "body": "The dataset contains 54,966 patient records across 19 attributes. Data completeness is 100.0%. There are 5 numeric, 14 categorical, and 0 datetime columns.",
+      "category": "Data Quality"
+    },
+    {
+      "title": "Billing Amount Distribution",
+      "body": "Patient billing amounts range from $-2,008 to $52,764 with a median of $25,543 (IQR: $13,244 \u2013 $37,820). The top 10% of patients account for bills exceeding $45,160, indicating a right-skewed revenue distribution typical in healthcare.",
+      "category": "Financial Analytics"
+    },
+    {
+      "title": "Patient Age Demographics",
+      "body": "Patient ages span 13 \u2013 89 years with a mean of 51.5 \u00b1 19.6 years. The dominant age group is '65+'. Senior patients (65+) represent 30.8% of the cohort.",
+      "category": "Demographics"
+    },
+    {
+      "title": "Gender Distribution",
+      "body": "The dataset is nearly balanced: 50.0% Male and 50.0% Female. This balanced split supports unbiased gender-stratified clinical analytics.",
+      "category": "Demographics"
+    },
+    {
+      "title": "Medical Condition Prevalence & Cost",
+      "body": "'Arthritis' is the most prevalent condition (9,218 cases; 16.8%). 'Asthma' is least prevalent (9,095 cases). All six conditions are represented with broadly similar frequencies, suggesting a well-stratified clinical dataset. Condition with highest average billing is 'Obesity' at $25,804.",
+      "category": "Clinical Analytics"
+    },
+    {
+      "title": "Admission Type Breakdown",
+      "body": "Admissions are roughly split: Elective 33.6%, Urgent 33.5%, Emergency 32.9%. The near-equal split across types is unusual and may reflect sampling design. Emergency admissions incur the highest average billing ($25,505 vs Elective $25,612).",
+      "category": "Operational Analytics"
+    },
+    {
+      "title": "Insurance Provider vs Billing Analysis",
+      "body": "'Medicare' is associated with the highest average billing ($25,628), while 'Unitedhealthcare' is lowest ($25,415). Differences are statistically noteworthy and may reflect coverage policy or patient demographics.",
+      "category": "Financial Analytics"
+    },
+    {
+      "title": "Blood Type Distribution",
+      "body": "All eight major blood types are present. 'A-' is most common (12.5%), closely mirroring global blood type frequencies. Blood type distribution shows no significant deviation, confirming representative patient sampling.",
+      "category": "Clinical Analytics"
+    },
+    {
+      "title": "Test Result Patterns by Medical Condition",
+      "body": "'Arthritis' has the highest rate of abnormal test results (34.2%). Chi-square analysis indicates that test result distribution varies by condition, suggesting condition-specific diagnostic pathways.",
+      "category": "Clinical Analytics"
+    },
+    {
+      "title": "Medication Prescribing Patterns",
+      "body": "'Lipitor' is the most prescribed medication (20.1%). All five medications have broadly similar prescription frequencies (range: 19.9% \u2013 20.1%), suggesting uniform protocol-driven prescribing. 'Ibuprofen' prescriptions correlate with highest average billing ($25,745).",
+      "category": "Clinical Analytics"
+    },
+    {
+      "title": "Age vs Billing Amount Correlation",
+      "body": "Pearson correlation between age and billing amount: r = -0.003 (p = 4.218e-01). No statistically significant linear relationship was detected, suggesting billing is driven by condition severity rather than age alone.",
+      "category": "Statistical Findings"
+    },
+    {
+      "title": "Top Hospitals by Average Billing",
+      "body": "The five hospitals with the highest average billing are: 'Hernandez-Morton', 'Walker-Garcia', 'Ruiz-Anthony', 'George-Gonzalez', 'Rocha-Carter'. Hospital-level billing variance may reflect specialisation mix, geographic pricing, or acuity differences \u2014 a key input for network contract negotiations.",
+      "category": "Financial Analytics"
+    }
+  ],
+  "charts_generated": [
+    "/mnt/user-data/outputs/charts/01_executive_dashboard.png",
+    "/mnt/user-data/outputs/charts/02_billing_distribution.png",
+    "/mnt/user-data/outputs/charts/03_age_distribution.png",
+    "/mnt/user-data/outputs/charts/04_medical_condition_analysis.png",
+    "/mnt/user-data/outputs/charts/05_correlation_heatmap.png",
+    "/mnt/user-data/outputs/charts/06_admission_type_analysis.png",
+    "/mnt/user-data/outputs/charts/07_insurance_billing.png",
+    "/mnt/user-data/outputs/charts/08_blood_type_distribution.png",
+    "/mnt/user-data/outputs/charts/10_test_results_heatmap.png",
+    "/mnt/user-data/outputs/charts/11_medication_analysis.png",
+    "/mnt/user-data/outputs/charts/13_age_billing_scatter.png",
+    "/mnt/user-data/outputs/charts/14_pca_clustering.png",
+    "/mnt/user-data/outputs/charts/15_billing_box_by_condition.png"
+  ]
+}
