@@ -1,0 +1,1995 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='investment_dataset_100k_realistic' inline='true' name='federated.0ww670x1bhiz1711pqs9q10k2wen' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='investment_dataset_100k_realistic' name='textscan.1h7wz8v0npywho16wkij11kb8a22'>
+            <connection class='textscan' directory='C:/Users/daksh/Desktop/dataset' filename='investment_dataset_100k_realistic.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1h7wz8v0npywho16wkij11kb8a22' name='investment_dataset_100k_realistic.csv' table='[investment_dataset_100k_realistic#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Asset ID' ordinal='0' />
+            <column datatype='date' name='Valuation Date' ordinal='1' />
+            <column datatype='string' name='Asset Class' ordinal='2' />
+            <column datatype='string' name='Sector' ordinal='3' />
+            <column datatype='real' name='Price' ordinal='4' />
+            <column datatype='integer' name='Units Held' ordinal='5' />
+            <column datatype='real' name='Cost' ordinal='6' />
+            <column datatype='real' name='Market Value' ordinal='7' />
+            <column datatype='real' name='Return %' ordinal='8' />
+            <column datatype='real' name='Risk (σ)' ordinal='9' />
+            <column datatype='real' name='Benchmark Return %' ordinal='10' />
+            <column datatype='integer' name='Risk Free Rate %' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Asset ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Asset ID]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Asset ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Valuation Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Valuation Date]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Valuation Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Asset Class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Asset Class]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Asset Class</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Price]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Price</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Units Held</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Units Held]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Units Held</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cost]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Cost</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Market Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Market Value]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Market Value</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Return %</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Return %]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Return %</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk (σ)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Risk (σ)]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Risk (σ)</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Benchmark Return %</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Benchmark Return %]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Benchmark Return %</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk Free Rate %</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Risk Free Rate %]</local-name>
+            <parent-name>[investment_dataset_100k_realistic.csv]</parent-name>
+            <remote-alias>Risk Free Rate %</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Return %]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+      <column caption='investment_dataset_100k_realistic.csv' datatype='table' name='[__tableau_internal_object_id__].[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]' role='measure' type='quantitative' />
+      <column-instance column='[Return %]' derivation='Avg' name='[avg:Return %:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Market Value]' derivation='Sum' name='[pcto:sum:Market Value:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Sector)' hidden='true' name='[Action (Sector)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Sector]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/daksh/AppData/Local/Temp/TableauTemp/#TableauTemp_09a37s21877ytz19ogy8d12337id.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/04/2026 05:36:28 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Asset ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Asset ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Asset ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3814</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Valuation Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Valuation Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Valuation Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>100</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Asset Class</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Asset Class]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Asset Class</remote-alias>
+              <ordinal>2</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sector</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sector]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sector</remote-alias>
+              <ordinal>3</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price</remote-alias>
+              <ordinal>4</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19268</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Units Held</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Units Held]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Units Held</remote-alias>
+              <ordinal>5</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3366</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cost</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Cost]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cost</remote-alias>
+              <ordinal>6</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3814</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Market Value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Market Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Market Value</remote-alias>
+              <ordinal>7</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>100000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Return %</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Return %]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Return %</remote-alias>
+              <ordinal>8</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17218</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Risk (σ)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Risk (σ)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Risk (σ)</remote-alias>
+              <ordinal>9</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3086</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Benchmark Return %</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Benchmark Return %]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Benchmark Return %</remote-alias>
+              <ordinal>10</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7400</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Risk Free Rate %</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Risk Free Rate %]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Risk Free Rate %</remote-alias>
+              <ordinal>11</ordinal>
+              <family>investment_dataset_100k_realistic.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return \%:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ww670x1bhiz1711pqs9q10k2wen].[pcto:sum:Market Value:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Sector:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Healthcare&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Automobile&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Consumer Goods&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;IT&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Corporate Bonds&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BFSI&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Energy&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Liquid Funds&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Government Bonds&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Bullion&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Treasury Bills&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Cash Equivalents&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='investment_dataset_100k_realistic.csv' id='investment_dataset_100k_realistic.csv_97D6BAAB23A847A4A70C5806FF5B6E1E'>
+            <properties context=''>
+              <relation connection='textscan.1h7wz8v0npywho16wkij11kb8a22' name='investment_dataset_100k_realistic.csv' table='[investment_dataset_100k_realistic#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Asset ID' ordinal='0' />
+                  <column datatype='date' name='Valuation Date' ordinal='1' />
+                  <column datatype='string' name='Asset Class' ordinal='2' />
+                  <column datatype='string' name='Sector' ordinal='3' />
+                  <column datatype='real' name='Price' ordinal='4' />
+                  <column datatype='integer' name='Units Held' ordinal='5' />
+                  <column datatype='real' name='Cost' ordinal='6' />
+                  <column datatype='real' name='Market Value' ordinal='7' />
+                  <column datatype='real' name='Return %' ordinal='8' />
+                  <column datatype='real' name='Risk (σ)' ordinal='9' />
+                  <column datatype='real' name='Benchmark Return %' ordinal='10' />
+                  <column datatype='integer' name='Risk Free Rate %' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_0846249E8A714D8CA1477CD1AE481D85]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 2' type='sheet' worksheet='Sheet 8' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 2' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>asset and return </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Return %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Return %]' derivation='Avg' name='[avg:Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]</cols>
+      </table>
+      <simple-id uuid='{F0A5D12D-CAEA-4B7F-9348-5D713DA3E547}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>risk vs return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Return %]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Risk (σ)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Return %]' derivation='Avg' name='[avg:Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Risk (σ)]' derivation='Avg' name='[avg:Risk (σ):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' value='128' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+              <size column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' />
+              <text column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <reference-line axis-column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-table' value-column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]' z-order='1' />
+            <reference-line axis-column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='value' probability='95' scope='per-table' value-column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]</cols>
+      </table>
+      <simple-id uuid='{3B089C42-C17D-45DB-A5B0-21A3FA9BB3A2}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>assest class and risk</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Risk (σ)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Risk (σ)]' derivation='Avg' name='[avg:Risk (σ):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]' field-type='quantitative' max='23.467657902272617' min='-0.87466336440795089' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]</cols>
+      </table>
+      <simple-id uuid='{93BC8024-15F0-40C1-ADEA-FAC029FE67F6}' />
+    </worksheet>
+    <worksheet name='Sheet 12'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Asset ID]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Asset ID]' derivation='None' name='[none:Asset ID:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset ID:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Market Value])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Asset ID:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset ID:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]</rows>
+        <cols>([federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset ID:nk] / [federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk])</cols>
+      </table>
+      <simple-id uuid='{25F349E3-BEA9-462E-AA1D-A1D5F076DF51}' />
+    </worksheet>
+    <worksheet name='Sheet 13'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Valuation Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Valuation Date]' derivation='Month-Trunc' name='[tmn:Valuation Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[tmn:Valuation Date:qk]</cols>
+      </table>
+      <simple-id uuid='{E06EE5F8-6975-47DD-A2B3-AAC233FC5C2F}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Return %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Valuation Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Return %]' derivation='Avg' name='[avg:Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Valuation Date]' derivation='Month-Trunc' name='[tmn:Valuation Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Return %])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Sector:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[tmn:Valuation Date:qk]</cols>
+      </table>
+      <simple-id uuid='{9644163E-4BB8-4DDC-9FF2-DFEDFC6402EC}' />
+    </worksheet>
+    <worksheet name='Sheet 15'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Benchmark Return %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Valuation Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Benchmark Return %]' derivation='Avg' name='[avg:Benchmark Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Valuation Date]' derivation='Month-Trunc' name='[tmn:Valuation Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([Benchmark Return %])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Sector:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Benchmark Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[tmn:Valuation Date:qk]</cols>
+      </table>
+      <simple-id uuid='{B7D6D242-D6F5-479C-AA90-46633F91829F}' />
+    </worksheet>
+    <worksheet name='Sheet 16'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{71DA3D3F-6B49-4814-899A-C0022650986E}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>asset and benchmark return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Benchmark Return %]' role='measure' type='quantitative' />
+            <column-instance column='[Benchmark Return %]' derivation='Avg' name='[avg:Benchmark Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Benchmark Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]</cols>
+      </table>
+      <simple-id uuid='{6C741D50-AC3D-4838-A73C-E849247E9D0F}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>asset class and cost</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='string' name='[Asset Class]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Cost]' role='measure' type='quantitative' />
+            <column-instance column='[Asset Class]' derivation='None' name='[none:Asset Class:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Cost]' derivation='Sum' name='[sum:Cost:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Cost:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]</cols>
+      </table>
+      <simple-id uuid='{96DC74C1-EBED-40A7-A542-D15F8A5185D5}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>sector and benchmark return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Benchmark Return %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Benchmark Return %]' derivation='Avg' name='[avg:Benchmark Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Benchmark Return %:qk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]</cols>
+      </table>
+      <simple-id uuid='{99934FD3-695B-4319-AB64-AE82538676E6}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>sector and cost</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Cost]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Cost]' derivation='Sum' name='[sum:Cost:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Cost:qk]' />
+              <text column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3497978E-62D4-41EE-94E5-C79805675625}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>sector and risk</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Risk (σ)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Risk (σ)]' derivation='Avg' name='[avg:Risk (σ):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' value='120' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#529985' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Risk (σ):qk]</cols>
+      </table>
+      <simple-id uuid='{F827AA17-B5CD-44CE-B9EC-E5BF79405559}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>sector and return</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Return %]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Return %]' derivation='Avg' name='[avg:Return %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]' field-type='quantitative' max='19.53746090590101' min='-0.63541433537239755' range-type='fixed' scope='cols' type='space' />
+            <format attr='height' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]' value='36' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' value='96' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Sector:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Avg. Return %:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]</rows>
+        <cols>[federated.0ww670x1bhiz1711pqs9q10k2wen].[avg:Return %:qk]</cols>
+      </table>
+      <simple-id uuid='{39A050A8-4E05-40B2-9BC9-95BE84D0CA2C}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>concentration analysis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Market Value]' derivation='Sum' name='[pcto:sum:Market Value:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' direction='DESC' using='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[pcto:sum:Market Value:qk:1]' />
+              <text column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BB229BB6-6FAB-4791-A2CB-0F32D510A383}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>sector and its market value</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='investment_dataset_100k_realistic' name='federated.0ww670x1bhiz1711pqs9q10k2wen' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ww670x1bhiz1711pqs9q10k2wen'>
+            <column datatype='real' name='[Market Value]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Market Value]' derivation='Sum' name='[sum:Market Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]'>
+            <groupfilter function='level-members' level='[Sector]' user:ui-action-filter='[Action1_0846249E8A714D8CA1477CD1AE481D85]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ww670x1bhiz1711pqs9q10k2wen].[Action (Sector)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' />
+              <color column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' />
+              <text column='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0A1D1925-6F7D-437D-A75A-9621F4209E08}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='40149' id='3' name='Sheet 11' w='17445' x='61' y='248' />
+        <zone h='39529' id='4' name='Sheet 1' w='16216' x='19226' y='496' />
+        <zone h='41388' id='8' name='Sheet 6' w='31757' x='35749' y='1735' />
+        <zone h='54523' id='9' name='Sheet 9' w='38268' x='62039' y='43742' />
+        <zone h='10905' id='10' name='Sheet 9' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type-v2='color' w='12346' x='87592' y='41636' />
+        <zone h='41264' id='13' name='Sheet 7' w='31634' x='68366' y='991' />
+        <zone h='55266' id='14' name='Sheet 10' w='31757' x='30098' y='42131' />
+        <zone h='13135' id='15' name='Sheet 10' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type-v2='size' w='8600' x='52887' y='74102' />
+        <zone h='60843' id='16' name='Sheet 8' w='29607' x='430' y='40273' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2200' minheight='2200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='21' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='40149' id='3' is-fixed='true' name='Sheet 11' w='17445' x='61' y='248'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39529' id='4' is-fixed='true' name='Sheet 1' w='16216' x='19226' y='496'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41264' id='13' is-fixed='true' name='Sheet 7' w='31634' x='68366' y='991'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41388' id='8' is-fixed='true' name='Sheet 6' w='31757' x='35749' y='1735'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='60843' id='16' is-fixed='true' name='Sheet 8' w='29607' x='430' y='40273'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='55266' id='14' is-fixed='true' name='Sheet 10' w='31757' x='30098' y='42131'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13135' id='15' name='Sheet 10' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type-v2='size' w='8600' x='52887' y='74102'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='54523' id='9' is-fixed='true' name='Sheet 9' w='38268' x='62039' y='43742'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10905' id='10' name='Sheet 9' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type-v2='color' w='12346' x='87592' y='41636'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6EFE1AFE-C3E9-4931-A1E2-4C3D3286B857}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='48780' id='3' name='Sheet 15' w='45685' x='26614' y='46458' />
+        <zone h='14750' id='4' name='Sheet 15' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type-v2='color' w='21485' x='31442' y='15099' />
+        <zone h='43786' id='5' name='Sheet 14' w='48401' x='664' y='2787' />
+        <zone h='45761' id='6' name='Sheet 13' w='49306' x='49487' y='929' />
+        <zone h='12311' id='7' name='Sheet 13' pane-specification-id='2' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]' type-v2='color' w='21545' x='57514' y='1161' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='10' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='280' h='45761' id='6' is-fixed='true' name='Sheet 13' w='49306' x='49487' y='929'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12311' id='7' name='Sheet 13' pane-specification-id='2' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]' type-v2='color' w='21545' x='57514' y='1161'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43786' id='5' is-fixed='true' name='Sheet 14' w='48401' x='664' y='2787'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48780' id='3' is-fixed='true' name='Sheet 15' w='45685' x='26614' y='46458'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14750' id='4' name='Sheet 15' pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type-v2='color' w='21485' x='31442' y='15099'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BE1CBC63-CB62-4293-8D9B-E3408E6F0875}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6BC3E863-3EE0-4EEF-8874-292E04A7C1FB}' />
+    </window>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8B063A6C-04F5-453D-AFD6-9F3361B02F29}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0B642D1A-63B3-4A8E-BB4B-14C9092DDEE4}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E8E449D0-0F19-4DA1-88C6-E314D5F3C3BA}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F2C7ADB4-0D99-4C5C-95D9-F7E0CD92B87B}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1D3D0C32-F449-4AEA-A73F-D4E4FB8979F3}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5C90E52E-8865-4AE1-9F74-13AFB076E784}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EC45FCDC-8D8F-4AB8-B66C-91BDE0D84E15}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D75E445D-1D75-4E3A-B774-99DB43587D0B}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E5999DA8-1407-4E90-82CA-41E21371BB95}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[sum:Market Value:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5A6522F9-65C8-4AA2-96D7-7008ADBCB389}' />
+    </window>
+    <window class='worksheet' name='Sheet 12'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3A753A69-363B-45AB-BB12-AEECBB807AE6}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Sheet 1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 10'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 11'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 7' />
+        <viewpoint name='Sheet 8'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 9' />
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true' />
+      <simple-id uuid='{DC88AD36-0E28-4D11-AFF1-FA1716837B54}' />
+    </window>
+    <window class='worksheet' name='Sheet 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Asset Class:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B5D25A0E-A2F4-4B78-9AE6-35CA6FC20C33}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2E489B8A-14B2-46BD-9ADE-4370FC2B7F28}' />
+    </window>
+    <window class='worksheet' name='Sheet 15'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ww670x1bhiz1711pqs9q10k2wen].[none:Sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DF5D8787-FF44-4045-8FFF-C56E00C26D28}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Sheet 13'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 14'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 15'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{3A1D004A-43CD-4792-9BF7-6851B15250E9}' />
+    </window>
+    <window class='worksheet' name='Sheet 16'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4CBCE908-4554-4368-BEB8-18F1BA495287}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 11' width='192'>
+      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
+      /rBFiLn6X9jHzZtN9cRBAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
